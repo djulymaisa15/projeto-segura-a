@@ -3,34 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Segurança - Alarme Ultrassônico Simulado</title>
+    <title>SafeGuard | Soluções em Segurança Eletrônica</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
 </head>
 <body>
 
-    <div class="container">
-        <h1>Sistema de Segurança Simulado</h1>
-        
-        <div class="sensor-info">
-            <h2>Sensor Ultrassônico (Simulado)</h2>
-            <p><strong>Distância Detectada:</strong> <span id="distanciaAtual">50 cm</span></p>
-            
-            <label for="distanciaSlider">Simular Distância do Objeto (cm):</label>
-            <input type="range" id="distanciaSlider" min="1" max="100" value="50">
-            
-            <p class="nota">O alarme dispara se a distância for **abaixo de 20 cm**.</p>
+    <header>
+        <div class="container">
+            <h1 class="logo">SafeGuard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sistema">O Sistema</a></li>
+                    <li><a href="#vantagens">Vantagens</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div id="statusAlarme" class="status-off">
-            <span id="textoStatus">Sistema Desativado</span>
-            <div class="luz-status"></div>
+    <main>
+        <section id="sistema" class="hero">
+            <div class="container">
+                <h2>Proteção Inteligente com Alarme Ultrassônico</h2>
+                <p class="sub-header">A segurança do seu patrimônio com a tecnologia de detecção mais avançada do mercado.</p>
+                
+                <div class="feature-box">
+                    <h3>Sensor de Frequência Ultrassônica</h3>
+                    <p>Nosso sistema de alarme utiliza **sensores ultrassônicos de alta frequência** para criar uma barreira de proteção invisível. Qualquer interrupção no campo de ondas sonoras dispara o alerta instantaneamente.</p>
+                    
+                    <div class="details">
+                        <p><strong>Tecnologia:</strong> Detecção por variação de frequência ultrassônica (40kHz - 60kHz).</p>
+                        <p><strong>Benefício:</strong> Alta sensibilidade a movimentos sutis dentro de áreas fechadas, minimizando alarmes falsos.</p>
+                        <button class="cta-button">Fale com um Especialista</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vantagens" class="vantagens">
+            <div class="container">
+                <h3>Por Que Escolher a SafeGuard?</h3>
+                <div class="vantagens-grid">
+                    <div class="grid-item">
+                        <h4>🔒 Alta Precisão</h4>
+                        <p>Tecnologia ultrassônica que mapeia o ambiente com precisão superior a sensores de movimento tradicionais.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>⚡ Resposta Imediata</h4>
+                        <p>Acionamento instantâneo do alarme na detecção de qualquer alteração na onda de frequência.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>🌐 Monitoramento 24h</h4>
+                        <p>Central de monitoramento dedicada pronta para agir em qualquer sinal de intrusão detectado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="container">
+                <h3>Solicite seu Orçamento Gratuito</h3>
+                <form>
+                    <input type="text" placeholder="Seu Nome Completo" required>
+                    <input type="email" placeholder="Seu Melhor E-mail" required>
+                    <textarea placeholder="Mensagem / Detalhes do Projeto" rows="4"></textarea>
+                    <button type="submit" class="cta-button">Enviar Pedido</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SafeGuard Soluções em Segurança. Todos os direitos reservados.</p>
         </div>
+    </footer>
 
-        <button id="btnAtivar" class="btn-action">Ativar Sistema</button>
-
-    </div>
-
-    <audio id="somAlarme" src="alarm_sound.mp3" preload="auto" loop></audio>
-    <script src="script.js"></script>
 </body>
 </html>
