@@ -1,1 +1,36 @@
-y
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Segurança - Alarme Ultrassônico Simulado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sistema de Segurança Simulado</h1>
+        
+        <div class="sensor-info">
+            <h2>Sensor Ultrassônico (Simulado)</h2>
+            <p><strong>Distância Detectada:</strong> <span id="distanciaAtual">50 cm</span></p>
+            
+            <label for="distanciaSlider">Simular Distância do Objeto (cm):</label>
+            <input type="range" id="distanciaSlider" min="1" max="100" value="50">
+            
+            <p class="nota">O alarme dispara se a distância for **abaixo de 20 cm**.</p>
+        </div>
+
+        <div id="statusAlarme" class="status-off">
+            <span id="textoStatus">Sistema Desativado</span>
+            <div class="luz-status"></div>
+        </div>
+
+        <button id="btnAtivar" class="btn-action">Ativar Sistema</button>
+
+    </div>
+
+    <audio id="somAlarme" src="alarm_sound.mp3" preload="auto" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
